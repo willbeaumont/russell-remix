@@ -6,7 +6,7 @@ import { siteData, userData } from "~/data";
 export default function Index() {
   return (
     <div>
-      <About data={siteData} />
+      <About data={siteData.about.content} />
       <Contact data={userData} />
     </div>
   );

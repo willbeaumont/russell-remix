@@ -3,15 +3,32 @@ import linkedIn from "images/contact/in-blue-logo.png";
 import twitter from "images/contact/2021 Twitter logo - blue.png";
 
 export interface SiteData {
-  architecture: SectionData;
-  research: SectionData;
+  architecture: ExperienceData;
+  "interactive-design": ExperienceData;
+  research: ExperienceData;
   about: SectionData;
 }
 
 export interface SectionData {
   name: string;
   link: string;
-  content: Array<ContentData | null>;
+  content: Array<ContentData>;
+}
+
+export interface ExperienceData {
+  name: string;
+  link: string;
+  content: ExperienceContent;
+}
+
+export interface ExperienceContent {
+  text: Array<Array<ExperienceElement>>;
+}
+
+export interface ExperienceElement {
+  blurb: string;
+  style: string;
+  link: string;
 }
 
 export interface ContentData {
@@ -22,7 +39,130 @@ export interface ContentData {
 }
 
 export const siteData = {
-  architecture: { name: "Architecture", link: "/architecture", content: [] },
+  architecture: {
+    name: "Architecture",
+    link: "/architecture",
+    content: {
+      text: [
+        [
+          { blurb: "Received a ", style: "", link: "" },
+          {
+            blurb:
+              "Master of Architecture from the Bartlett School of Architecture",
+            style: "font-bold",
+            link: "",
+          },
+          {
+            blurb: ", University College London; and a ",
+            style: "",
+            link: "",
+          },
+          {
+            blurb:
+              "Bachelor of Architecture at the University of Texas at Austin",
+            style: "font-bold",
+            link: "",
+          },
+          { blurb: ".", style: "", link: "" },
+        ],
+        [
+          {
+            blurb: "Currently work at COOKFOX Architects.",
+            style: "",
+            link: "",
+          },
+        ],
+        [
+          {
+            blurb: "Worked at Curtis + Ginsberg Architects, where I ",
+            style: "",
+            link: "",
+          },
+          {
+            blurb:
+              "contributed to 2 winning competition entries and a large scale rezoning application",
+            style: "",
+            link: "./professional-work",
+          },
+          { blurb: ".", style: "", link: "" },
+        ],
+        [
+          {
+            blurb: "Have worked in Argentina at ",
+            style: "",
+            link: "",
+          },
+          {
+            blurb: "MONOBLOCK Arquitectura",
+            style: "",
+            link: "./professional-work",
+          },
+          {
+            blurb: " and in Chile ",
+            style: "",
+            link: "",
+          },
+          {
+            blurb: "UndurragaDeves Arquitectura",
+            style: "",
+            link: "./professional-work",
+          },
+          {
+            blurb: ", during which I gained a ",
+            style: "",
+            link: "",
+          },
+          {
+            blurb: "professional working proficiency in Spanish",
+            style: "font-bold",
+            link: "",
+          },
+          { blurb: ".", style: "", link: "" },
+        ],
+        [
+          { blurb: "Gained ", style: "", link: "" },
+          {
+            blurb: "experience in construction",
+            style: "",
+            link: "./general-contracting",
+          },
+          {
+            blurb:
+              " as an assistant project manager in southeastern New Mexico.",
+            style: "",
+            link: "",
+          },
+        ],
+        [
+          {
+            blurb: "Won a travel ",
+            style: "",
+            link: "",
+          },
+          {
+            blurb: "fellowship to continue research on post-disaster housing",
+            style: "",
+            link: "./temporary-housing",
+          },
+          {
+            blurb: " and a Henry Adams AIA certificate upon graduation. ",
+            style: "",
+            link: "",
+          },
+          {
+            blurb: "Received press for graduate thesis",
+            style: "",
+            link: "/interactive-design/palimpsest",
+          },
+          {
+            blurb: " blending virtual reality and participatory urban design.",
+            style: "",
+            link: "",
+          },
+        ],
+      ],
+    },
+  },
   "interactive-design": {
     name: "Interactive Design",
     link: "/interactive-design",

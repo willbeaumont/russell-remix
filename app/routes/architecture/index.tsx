@@ -1,5 +1,14 @@
-import BuildingPlaceholder from "~/components/layout/building";
+import RelevantExperience from "~/components/layout/relevant-experience";
+
+import { siteData } from "~/data";
 
 export default function Index() {
-  return <BuildingPlaceholder />;
+  return (
+    <>
+      <RelevantExperience
+        data={siteData.architecture.content}
+        sectionName="architecture"
+      />
+    </>
+  );
 }

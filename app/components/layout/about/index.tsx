@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 
-import { ContentData, SiteData } from "~/data";
+import { ContentData, SectionData } from "~/data";
 
 export function Paragraph({ tagline, link, blurb }: ContentData) {
   return (
@@ -15,20 +15,17 @@ export function Paragraph({ tagline, link, blurb }: ContentData) {
   );
 }
 
-export default function About({ data }: { data: SiteData }) {
+export default function About({ data }: { data: Array<ContentData> }) {
   return (
     <section id="about-content" className="mt-24 lg:mt-28">
-      {data.about.content.map(
-        (section) =>
-          section && (
-            <Paragraph
-              key={section.key}
-              tagline={section.tagline}
-              link={section.link}
-              blurb={section.blurb}
-            />
-          )
-      )}
+      {data.map((section) => (
+        <Paragraph
+          key={section.key}
+          tagline={section.tagline}
+          link={section.link}
+          blurb={section.blurb}
+        />
+      ))}
     </section>
   );
 }
