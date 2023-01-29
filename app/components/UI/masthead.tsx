@@ -42,7 +42,12 @@ export default function MastHead() {
             const opacity = link === location.pathname ? "" : opacityCss;
             if (objKey !== "about") {
               return (
-                <Link key={objKey} to={siteObj.link} className={`${opacity}`}>
+                <Link
+                  key={objKey}
+                  to={siteObj.link}
+                  onClick={() => setOpen(false)}
+                  className={`${opacity}`}
+                >
                   {siteObj.name}
                 </Link>
               );
@@ -53,6 +58,7 @@ export default function MastHead() {
         <Link
           key="about"
           to={siteData.about.link}
+          onClick={() => setOpen(false)}
           className={`${
             location.pathname !== "/about" ? opacityCss : ""
           } mt-6 sm:mt-0`}
