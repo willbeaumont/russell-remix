@@ -1,6 +1,6 @@
 import { UserData, UserSocial } from "~/data";
 
-function SocialMedia({ data }: { data: Array<UserSocial> }) {
+function ContactButtons({ data }: { data: Array<UserSocial> }) {
   return (
     <div
       className="grid grid-cols-4
@@ -34,7 +34,7 @@ export default function Contact({ data }: { data: UserData }) {
         className="flex flex-col justify-between my-5 sm:w-1/2 sm:px-4 sm:mt-0 sm:justify-start"
       >
         <p className="text-2xl lg:text-3xl">Contact</p>
-        <SocialMedia data={data.social} />
+        <ContactButtons data={data.social} />
       </div>
       <img
         src={data.profile.img}
