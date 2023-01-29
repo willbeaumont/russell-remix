@@ -1,6 +1,6 @@
-import profilePic from "images/about-profile.jpeg";
-import linkedIn from "images/in-blue-logo.png";
-import twitter from "images/2021 Twitter logo - blue.png";
+import profilePic from "images/contact/about-profile.jpeg";
+import linkedIn from "images/contact/in-blue-logo.png";
+import twitter from "images/contact/2021 Twitter logo - blue.png";
 
 export interface SiteData {
   architecture: SectionData;
