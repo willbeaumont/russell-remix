@@ -10,19 +10,20 @@ export default function MastHead() {
   const location = useLocation(); // set opacity of nav
 
   // tailwind controls to show/hide hamburger menu
-  const navbarCss =
-    "sm:visible flex-col items-end border pt-12 p-4 -mt-16 ml-auto w-fit bg-slate-50";
   const hamburgerCss =
+    "sm:visible flex-col items-end border pt-12 p-4 -mt-16 ml-auto w-fit bg-slate-50";
+  const navbarCss =
     "sm:h-full sm:flex-row sm:items-center sm:justify-between sm:border-none sm:p-0 sm:m-0 sm:w-full sm:text-xl lg:text-2xl sm:bg-white";
 
   // toggle showing/hiding hamburger menu
-  const [isOpen, setOpen] = useState(false);
-  const visibleCss = isOpen ? "visible" : "invisible";
+  const [isOpen, setOpen] = useState(true);
+  const menuVisibleCss = isOpen ? "visible" : "invisible";
+  const nameVisibleCss = isOpen ? "invisible" : "visible";
 
   return (
     <nav className="fixed top-0 z-1 w-full h-20 px-14 lg:px-40 bg-white shadow-md">
       <div className="sm:hidden h-full flex items-center justify-between">
-        <p className="text-2xl">John Russell Beaumont</p>
+        <p className={`${nameVisibleCss} text-2xl`}>John Russell Beaumont</p>
         <Hamburger
           toggled={isOpen}
           toggle={setOpen}
@@ -31,16 +32,16 @@ export default function MastHead() {
         />
       </div>
       <div
-        className={`${visibleCss} flex text-2xl text-about-link ${navbarCss} ${hamburgerCss}`}
+        className={`${menuVisibleCss} flex text-3xl text-about-link ${navbarCss} ${hamburgerCss}`}
       >
-        <div className="flex flex-col text-right sm:block sm:text-left sm:space-x-6">
+        <div className="flex flex-col text-right sm:block sm:text-left sm:space-x-6 space-y-6">
           {Object.keys(siteData).map((objKey) => {
             const siteObj = siteData[objKey as keyof SiteData];
             const link = siteObj.link;
             const opacity = link === location.pathname ? "" : "opacity-50";
             if (objKey !== "about") {
               return (
-                <Link key={objKey} to={siteObj.link} className={opacity}>
+                <Link key={objKey} to={siteObj.link} className={`${opacity}`}>
                   {siteObj.name}
                 </Link>
               );
@@ -51,7 +52,9 @@ export default function MastHead() {
         <Link
           key="about"
           to={siteData.about.link}
-          className={`${location.pathname !== "/about" ? "opacity-50" : ""}`}
+          className={`${
+            location.pathname !== "/about" ? "opacity-50" : ""
+          } mt-6 sm:mt-0`}
         >
           {siteData.about.name}
         </Link>
