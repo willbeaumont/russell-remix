@@ -8,6 +8,7 @@ import type { SiteData } from "~/data";
 
 export default function MastHead() {
   const location = useLocation(); // set opacity of nav
+  const pathname = location?.pathname;
   const opacityCss = "opacity-50 hover:opacity-100";
 
   // tailwind controls to show/hide hamburger menu
@@ -41,7 +42,7 @@ export default function MastHead() {
           {Object.keys(siteData).map((objKey) => {
             const siteObj = siteData[objKey as keyof SiteData];
             const link = siteObj.link;
-            const opacity = link === location.pathname ? "" : opacityCss;
+            const opacity = link === pathname ? "" : opacityCss;
             if (objKey !== "about") {
               return (
                 <Link
@@ -61,9 +62,7 @@ export default function MastHead() {
           key="about"
           to={siteData.about.link}
           onClick={() => setOpen(false)}
-          className={`${
-            location.pathname !== "/about" ? opacityCss : ""
-          } mt-6 sm:mt-0`}
+          className={`${pathname !== "/about" ? opacityCss : ""} mt-6 sm:mt-0`}
         >
           {siteData.about.name}
         </Link>
