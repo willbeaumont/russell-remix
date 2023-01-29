@@ -1,13 +1,8 @@
 import { Link } from "@remix-run/react";
+
 import { ContentData, SiteData } from "~/data";
 
-interface AboutParagraphProps {
-  tagline: string;
-  link: string;
-  blurb: string;
-}
-
-export function Paragraph({ tagline, link, blurb }: AboutParagraphProps) {
+export function Paragraph({ tagline, link, blurb }: ContentData) {
   return (
     <div className="mx-14 lg:mx-40 my-10 sm:my-16 sm:text-xl lg:text-2xl">
       <strong>

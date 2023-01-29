@@ -781,6 +781,14 @@ video {
   text-decoration-line: underline;
 }
 
+.hover\:opacity-0:hover {
+  opacity: 0;
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
+}
+
 @media (min-width: 640px) {
   .sm\:visible {
     visibility: visible;

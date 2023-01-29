@@ -58,6 +58,22 @@ export const siteData = {
   },
 };
 
+export interface UserData {
+  profile: UserProfile;
+  social: Array<UserSocial>;
+}
+
+export interface UserProfile {
+  alt: string;
+  img: string;
+}
+
+export interface UserSocial {
+  alt: string;
+  img: string;
+  href: string;
+}
+
 export const userData = {
   profile: {
     alt: "John Russell Beaumont",
