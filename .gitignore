@@ -1,0 +1,9 @@
+node_modules
+
+.DS_Store
+/.cache
+/public/build
+/.netlify
+.env
+
+/app/styles/tailwind.css
