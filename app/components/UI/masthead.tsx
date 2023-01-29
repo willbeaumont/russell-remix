@@ -17,18 +17,20 @@ export default function MastHead() {
     "sm:h-full sm:flex-row sm:items-center sm:justify-between sm:border-none sm:p-0 sm:m-0 sm:w-full sm:text-xl lg:text-2xl sm:bg-white";
 
   // toggle showing/hiding hamburger menu
-  const [isOpen, setOpen] = useState(true);
+  const [isOpen, setOpen] = useState(false);
   const menuVisibleCss = isOpen ? "visible" : "invisible";
   const nameVisibleCss = isOpen ? "invisible" : "visible";
 
   return (
     <nav className="fixed top-0 z-1 w-full h-20 px-14 lg:px-40 bg-white shadow-md">
       <div className="sm:hidden h-full flex items-center justify-between">
-        <p className={`${nameVisibleCss} text-2xl`}>John Russell Beaumont</p>
+        <p className={`${nameVisibleCss} text-2xl text-about-text`}>
+          John Russell Beaumont
+        </p>
         <Hamburger
           toggled={isOpen}
           toggle={setOpen}
-          color="#4B727C"
+          color="#0284c7"
           rounded={true}
         />
       </div>
