@@ -3,9 +3,22 @@ import linkedIn from "images/in-blue-logo.png";
 import twitter from "images/2021 Twitter logo - blue.png";
 
 export interface SiteData {
-  architecture: Object;
-  research: Object;
-  about: Object;
+  architecture: SectionData;
+  research: SectionData;
+  about: SectionData;
+}
+
+export interface SectionData {
+  name: string;
+  link: string;
+  content: Array<ContentData | null>;
+}
+
+export interface ContentData {
+  key: string;
+  tagline: string;
+  link: string;
+  blurb: string;
 }
 
 export const siteData = {

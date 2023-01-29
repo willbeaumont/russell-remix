@@ -1,4 +1,5 @@
-import AboutParagraph from "~/components/layout/about-paragraph";
+import About from "~/components/layout/about/about-paragraph";
+import Paragraph from "~/components/layout/about/about-paragraph";
 
 import { siteData, userData } from "~/data";
 
@@ -6,16 +7,7 @@ import { siteData, userData } from "~/data";
 export default function Index() {
   return (
     <div>
-      <section id="about-content" className="mt-24 lg:mt-28">
-        {siteData.about.content.map((section) => (
-          <AboutParagraph
-            key={section.key}
-            tagline={section.tagline}
-            link={section.link}
-            blurb={section.blurb}
-          />
-        ))}
-      </section>
+      <About data={siteData} />
       <section
         id="contact-info"
         className="mx-14 lg:mx-40 sm:flex sm:flex-row-reverse sm:justify-between"
