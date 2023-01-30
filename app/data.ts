@@ -2,6 +2,18 @@ import profilePic from "images/contact/about-profile.jpeg";
 import linkedIn from "images/contact/in-blue-logo.png";
 import twitter from "images/contact/2021 Twitter logo - blue.png";
 
+import architectProfessionalWork from "images/architecture/professional-work/index.jpeg";
+import architectTheoreticalWork from "images/architecture/theoretical-work/index.jpeg";
+import architectGeneralContracting from "images/architecture/general-contracting/index.jpeg";
+
+import interactivePalimpsest from "images/interactive-design/palimpsest/index.jpeg";
+import interactiveProfessionalWork from "images/interactive-design/professional-work/index.jpeg";
+import interactiveTracesOfReality from "images/interactive-design/traces-of-reality/index.jpeg";
+
+import researchProfessionalWork from "images/research/professional-work/index.jpeg";
+import researchTechnology from "images/research/technology-and-urbanism/index.jpeg";
+import researchTempHousing from "images/research/temporary-housing/index.jpeg";
+
 export interface SiteData {
   architecture: ExperienceData;
   "interactive-design": ExperienceData;
@@ -22,10 +34,18 @@ export interface ExperienceData {
 }
 
 export interface ExperienceContent {
-  text: Array<Array<ExperienceElement>>;
+  images: Array<ExperienceImage>;
+  text: Array<Array<ExperienceText>>;
 }
 
-export interface ExperienceElement {
+export interface ExperienceImage {
+  alt: string;
+  img: string;
+  title: string;
+  link: string;
+}
+
+export interface ExperienceText {
   blurb: string;
   style: string;
   link: string;
@@ -43,6 +63,26 @@ export const siteData = {
     name: "Architecture",
     link: "/architecture",
     content: {
+      images: [
+        {
+          alt: "rendering of a building",
+          img: architectProfessionalWork,
+          title: "professional work",
+          link: "professional-work",
+        },
+        {
+          alt: "side cut of a building drawing",
+          img: architectTheoreticalWork,
+          title: "theoretical work",
+          link: "theoretical-work",
+        },
+        {
+          alt: "construction site with cranes",
+          img: architectGeneralContracting,
+          title: "assistant project managing",
+          link: "general-contracting",
+        },
+      ],
       text: [
         [
           { blurb: "Received a ", style: "", link: "" },
@@ -167,6 +207,26 @@ export const siteData = {
     name: "Interactive Design",
     link: "/interactive-design",
     content: {
+      images: [
+        {
+          alt: "lidar image of park and construction",
+          img: interactivePalimpsest,
+          title: "palimpsest",
+          link: "./palimpsest",
+        },
+        {
+          alt: "children using ar headset",
+          img: interactiveTracesOfReality,
+          title: "traces of reality",
+          link: "./traces-of-reality",
+        },
+        {
+          alt: "digital art exhibit",
+          img: interactiveProfessionalWork,
+          title: "professional work",
+          link: "./professional-work",
+        },
+      ],
       text: [
         [
           { blurb: "Designed a ", style: "", link: "" },
@@ -224,6 +284,26 @@ export const siteData = {
     name: "Research",
     link: "/research",
     content: {
+      images: [
+        {
+          alt: "Tent compound in Boynuyogun, Turkey near the Syrian border",
+          img: researchProfessionalWork,
+          title: "professional work",
+          link: "./professional-work",
+        },
+        {
+          alt: "LIDAR image of Drummond Street.",
+          img: researchTechnology,
+          title: "technology and urbanism",
+          link: "./technology-and-urbanism",
+        },
+        {
+          alt: "Village at a river mouth in Chile.",
+          img: researchTempHousing,
+          title: "temporary housing",
+          link: "./temporary-housing",
+        },
+      ],
       text: [
         [
           {

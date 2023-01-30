@@ -1,10 +1,10 @@
 import { Link } from "@remix-run/react";
-import { ExperienceContent, ExperienceElement } from "~/data";
+import { ExperienceContent, ExperienceText } from "~/data";
 
-export function Paragraph({ data }: { data: Array<ExperienceElement> }) {
+export function Paragraph({ data }: { data: Array<ExperienceText> }) {
   return (
     <p className="my-5 sm:my-11">
-      {data.map((sentence: ExperienceElement, index: number) => (
+      {data.map((sentence: ExperienceText, index: number) => (
         <Sentence
           key={`sentence-${index}`}
           blurb={sentence.blurb}
@@ -16,7 +16,7 @@ export function Paragraph({ data }: { data: Array<ExperienceElement> }) {
   );
 }
 
-export function Sentence({ blurb, style, link }: ExperienceElement) {
+export function Sentence({ blurb, style, link }: ExperienceText) {
   let sentenceText = <span className={style}>{blurb}</span>;
 
   if (/^http/.test(link)) {
@@ -51,7 +51,7 @@ export default function RelevantExperience({
   return (
     <section
       id={`${sectionName}-text`}
-      className="mt-24 lg:mt-28 mx-14 lg:mx-40 sm:text-xl lg:text-2xl"
+      className="mt-12 pb-12 lg:mt-28 mx-14 lg:mx-40 sm:text-xl lg:text-2xl"
     >
       <h2 className="italic">Relevant Experience</h2>
       {data.text.map((paragraph, index: number) => (

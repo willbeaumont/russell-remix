@@ -23,7 +23,7 @@ export default function MastHead() {
   const nameVisibleCss = isOpen ? "invisible" : "visible";
 
   return (
-    <nav className="fixed top-0 z-1 w-full h-20 px-14 lg:px-40 bg-white shadow-md">
+    <nav className="fixed z-50 top-0 w-full h-20 px-14 lg:px-40 bg-white shadow-md">
       <div className="sm:hidden h-full flex items-center justify-between">
         <p className={`${nameVisibleCss} text-2xl text-about-text`}>
           John Russell Beaumont
