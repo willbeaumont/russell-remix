@@ -19,7 +19,18 @@ export function Paragraph({ data }: { data: Array<ExperienceElement> }) {
 export function Sentence({ blurb, style, link }: ExperienceElement) {
   let sentenceText = <span className={style}>{blurb}</span>;
 
-  if (link) {
+  if (/^http/.test(link)) {
+    sentenceText = (
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-about-link hover:underline"
+      >
+        {sentenceText}
+      </a>
+    );
+  } else if (link) {
     sentenceText = (
       <Link to={link} className="text-about-link hover:underline">
         {sentenceText}
