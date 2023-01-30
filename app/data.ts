@@ -166,9 +166,151 @@ export const siteData = {
   "interactive-design": {
     name: "Interactive Design",
     link: "/interactive-design",
-    content: [],
+    content: {
+      text: [
+        [
+          { blurb: "Designed a ", style: "", link: "" },
+          {
+            blurb: "thesis project using virtual reality",
+            style: "",
+            link: "./palimpsest",
+          },
+          {
+            blurb:
+              " during my Masters of Architecture at the Bartlett School of Architecture, University College London.",
+            style: "",
+            link: "",
+          },
+        ],
+        [
+          {
+            blurb: "Freelance programmer",
+            style: "",
+            link: "./professional-work",
+          },
+          { blurb: " with Marshmallow Laser Feast.", style: "", link: "" },
+        ],
+        [
+          { blurb: "Invited artist", style: "", link: "./traces-of-reality" },
+          { blurb: " to the We Are Now Festival.", style: "", link: "" },
+        ],
+        [
+          { blurb: "The Palimpsest was ", style: "", link: "" },
+          {
+            blurb:
+              "featured on Wired, The Guardian, designboom, and the Creative Arts Network",
+            style: "",
+            link: "./palimpsest",
+          },
+          { blurb: ".", style: "", link: "" },
+        ],
+        [
+          { blurb: "Have been ", style: "", link: "" },
+          {
+            blurb: "invited to speak and show the Palimpsest",
+            style: "",
+            link: "./palimpsest",
+          },
+          {
+            blurb: " at conferences in Brussels, London, and Venice.",
+            style: "",
+            link: "",
+          },
+        ],
+      ],
+    },
   },
-  research: { name: "Research", link: "/research", content: [] },
+  research: {
+    name: "Research",
+    link: "/research",
+    content: {
+      text: [
+        [
+          {
+            blurb: "Awarded a ",
+            style: "",
+            link: "",
+          },
+          {
+            blurb: "Marshall Scholarship",
+            style: "",
+            link: "https://en.wikipedia.org/wiki/Marshall_Scholarship",
+          },
+          {
+            blurb: " for two years of fully-funded graduate school in the UK.",
+            style: "",
+            link: "",
+          },
+        ],
+        [
+          {
+            blurb: "Teach classes about the built environment",
+            style: "font-bold",
+            link: "",
+          },
+          {
+            blurb:
+              " at John Jay College of Criminal Justice, City University of New York.",
+            style: "",
+            link: "",
+          },
+        ],
+        [
+          {
+            blurb:
+              "Received highest honors and invited to speak at conferences for thesis work produced during my ",
+            style: "",
+            link: "",
+          },
+          {
+            blurb: "MA in International Development",
+            style: "",
+            link: "./temporary-housing",
+          },
+          { blurb: " and my ", style: "", link: "" },
+          {
+            blurb: "MArch in Architectural Design",
+            style: "",
+            link: "./tech-urbanism",
+          },
+          { blurb: ".", style: "", link: "" },
+        ],
+        [
+          {
+            blurb:
+              "Co-wrote two articles with Mark Ginsberg of Curtis + Ginsberg Architects LLP on the ",
+            style: "",
+            link: "",
+          },
+          {
+            blurb: "affordability crisis in New York City",
+            style: "",
+            link: "./professional-work",
+          },
+          { blurb: " and on the ", style: "", link: "" },
+          {
+            blurb: "adoption of Passive House standards as building code",
+            style: "",
+            link: "./professional-work",
+          },
+          { blurb: ".", style: "", link: "" },
+        ],
+        [
+          {
+            blurb: "Won runner-up prize for co-designing an app",
+            style: "",
+            link: "./tech-urbanism",
+          },
+          {
+            blurb:
+              " that helps the Gehl Institute collect data about public urban spaces.",
+            style: "",
+            link: "",
+          },
+        ],
+      ],
+    },
+  },
   about: {
     name: "About",
     link: "/about",
