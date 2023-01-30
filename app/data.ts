@@ -182,7 +182,7 @@ export const siteData = {
           {
             blurb: "fellowship to continue research on post-disaster housing",
             style: "",
-            link: "./temporary-housing",
+            link: "/research/temporary-housing",
           },
           {
             blurb: " and a Henry Adams AIA certificate upon graduation. ",
@@ -351,7 +351,7 @@ export const siteData = {
           {
             blurb: "MArch in Architectural Design",
             style: "",
-            link: "./tech-urbanism",
+            link: "./technology-and-urbanism",
           },
           { blurb: ".", style: "", link: "" },
         ],
@@ -379,7 +379,7 @@ export const siteData = {
           {
             blurb: "Won runner-up prize for co-designing an app",
             style: "",
-            link: "./tech-urbanism",
+            link: "./technology-and-urbanism",
           },
           {
             blurb:
