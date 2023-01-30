@@ -42,7 +42,9 @@ export default function MastHead() {
           {Object.keys(siteData).map((objKey) => {
             const siteObj = siteData[objKey as keyof SiteData];
             const link = siteObj.link;
-            const opacity = link === pathname ? "" : opacityCss;
+            const linkRegex = new RegExp(`^${link}`);
+            const opacity = linkRegex.test(pathname) ? "" : opacityCss;
+
             if (objKey !== "about") {
               return (
                 <Link
