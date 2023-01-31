@@ -13,6 +13,7 @@ export default function ImageNav({ data }: { data: Array<ExperienceImage> }) {
           >
             <img
               src={section.img}
+              alt={section.alt}
               className="object-cover h-48 w-full sm:h-60 lg:h-full sm:w-auto group-hover:opacity-30 mx-auto"
             />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-0 group-hover:opacity-100">
