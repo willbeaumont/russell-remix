@@ -16,7 +16,7 @@ sm:grid-cols-3 justify-around h-full mt-5  sm:place-items-center sm:justify-item
           <img src={media.img} alt={media.alt} className="w-12" />
         </a>
       ))}
-      <button className="sm:w-[144px] text-lg border-2 py-2 px-5 bg-blue-300 col-span-2">
+      <button className="sm:w-[144px] text-lg border-2 py-2 px-5 bg-blue-300 col-span-2 rounded-md">
         EMAIL
       </button>
     </div>
@@ -36,11 +36,13 @@ export default function Contact({ data }: { data: UserData }) {
         <p className="text-2xl lg:text-3xl">Contact</p>
         <ContactButtons data={data.social} />
       </div>
-      <img
-        src={data.profile.img}
-        alt={data.profile.alt}
-        className="pb-10 sm:w-1/2 sm:max-w-xs"
-      />
+      <div className=" pb-10 sm:w-1/2 sm:max-w-xs">
+        <img
+          src={data.profile.img}
+          alt={data.profile.alt}
+          className="rounded-lg"
+        />
+      </div>
     </section>
   );
 }
