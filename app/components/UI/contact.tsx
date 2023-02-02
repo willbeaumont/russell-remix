@@ -36,7 +36,7 @@ export default function Contact({ data }: { data: UserData }) {
         <p className="text-2xl lg:text-3xl">Contact</p>
         <ContactButtons data={data.social} />
       </div>
-      <div className=" pb-10 sm:w-1/2 sm:max-w-xs">
+      <div className="pb-10 sm:w-1/2 sm:max-w-xs">
         <img
           src={data.profile.img}
           alt={data.profile.alt}
