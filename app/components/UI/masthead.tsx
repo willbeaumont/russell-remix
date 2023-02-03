@@ -3,8 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Link } from "@remix-run/react";
 import { Squash as Hamburger } from "hamburger-react";
 
-import { siteData } from "~/data";
-import type { SiteData } from "~/data";
+import { Experience, experienceObject, siteData } from "~/data";
 
 export default function MastHead() {
   const location = useLocation(); // set opacity of nav
@@ -39,8 +38,8 @@ export default function MastHead() {
         className={`${menuVisibleCss} flex text-3xl text-about-link ${navbarCss} ${hamburgerCss}`}
       >
         <div className="flex flex-col text-right sm:block sm:text-left sm:space-x-6 space-y-6">
-          {Object.keys(siteData).map((objKey) => {
-            const siteObj = siteData[objKey as keyof SiteData];
+          {Object.keys(experienceObject).map((objKey) => {
+            const siteObj = experienceObject[objKey as keyof Experience];
             const link = siteObj.link;
             const linkRegex = new RegExp(`^${link}`);
             const opacity = linkRegex.test(pathname) ? "" : opacityCss;

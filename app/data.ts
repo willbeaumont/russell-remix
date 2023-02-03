@@ -14,10 +14,13 @@ import researchProfessionalWork from "images/research/professional-work/index.jp
 import researchTechnology from "images/research/technology-and-urbanism/index.jpeg";
 import researchTempHousing from "images/research/temporary-housing/index.jpeg";
 
-export interface SiteData {
+export interface Experience {
   architecture: ExperienceData;
   "interactive-design": ExperienceData;
   research: ExperienceData;
+}
+
+export interface SiteData {
   about: SectionData;
 }
 
@@ -58,7 +61,17 @@ export interface ContentData {
   blurb: string;
 }
 
-export const siteData = {
+export const futureSections = [
+  "general-contracting",
+  "professional-work",
+  "theoretical-work",
+  "palimpsest",
+  "traces-of-reality",
+  "technology-and-urbanism",
+  "temporary-housing",
+];
+
+export const experienceObject = {
   architecture: {
     name: "Architecture",
     link: "/architecture",
@@ -391,6 +404,9 @@ export const siteData = {
       ],
     },
   },
+};
+
+export const siteData = {
   about: {
     name: "About",
     link: "/about",
