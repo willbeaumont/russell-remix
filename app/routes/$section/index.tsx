@@ -1,5 +1,5 @@
 import { useCatch, useLoaderData } from "@remix-run/react";
-import { json, LoaderArgs } from "@remix-run/node";
+import { LoaderArgs } from "@remix-run/node";
 
 import BuildingPlaceholder from "~/components/layout/building";
 import NoPage from "~/components/layout/noPage";
