@@ -1,5 +1,5 @@
-import { useCatch, useLoaderData } from "@remix-run/react";
-import { json, LoaderArgs } from "@remix-run/node";
+import { useCatch, useLoaderData, useParams } from "@remix-run/react";
+import { json, LoaderArgs, MetaFunction } from "@remix-run/node";
 
 import BuildingPlaceholder from "~/components/layout/building";
 import NoPage from "~/components/layout/noPage";
@@ -25,6 +25,15 @@ export function loader({ params }: LoaderArgs) {
     throw new Response(`Route undefined`, { status: 404 });
   }
 }
+
+export const meta: MetaFunction<typeof loader> = ({ data, params }) => {
+  const metaTags = {
+    description: "Sub section page of John's experience.",
+    title: "JRB | Under Construction",
+  };
+
+  return metaTags;
+};
 
 export default function Index() {
   const subSection = useLoaderData<typeof loader>();
