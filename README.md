@@ -1,9 +1,27 @@
-# Welcome to Remix!
+# The Architect - Portfolio Website
+
+Hello! This is a refactor of an architect portfolio Squarespace into a Remix.run (aka Remix) website. The Remix website is not completely built, but the refactored pages have much better performance than their Squarespace counterparts.
+
+Original site: http://www.johnrussellbeaumont.com/
+
+![lighthouse results for squarespace site](images/readme/jrb_squarespace.png)
+
+Remix site: https://russell-remix.netlify.app/
+
+![lighthouse results for remix site](images/readme/jrb_remix.png)
+
+Please feel free to comment or suggest improvements.
+
+## How to run!
+
+Use the Remix boilerplate below to setup your own version of the page. This code base needs work to be extended to other user portfolio sites.
+
+### Welcome to Remix!
 
 - [Remix Docs](https://remix.run/docs)
 - [Netlify Functions](https://www.netlify.com/products/functions/)
 
-## Netlify Setup
+### Netlify Setup
 
 1. Install the [Netlify CLI](https://www.netlify.com/products/dev/):
 
@@ -29,7 +47,7 @@ netlify login
 netlify init
 ```
 
-## Development
+### Development
 
 The Remix dev server starts your app in development mode, rebuilding assets on file changes. To start the Remix dev server:
 
@@ -49,7 +67,7 @@ Open up [http://localhost:3000](http://localhost:3000), and you should be ready 
 
 Note: When running the Netlify CLI, file changes will rebuild assets, but you will not see the changes to the page you are on unless you do a browser refresh of the page. Due to how the Netlify CLI builds the Remix App Server, it does not support hot module reloading.
 
-## Deployment
+### Deployment
 
 There are two ways to deploy your app to Netlify, you can either link your app to your git repo and have it auto deploy changes to Netlify, or you can deploy your app manually. If you've followed the setup instructions already, all you need to do is run this:
 
