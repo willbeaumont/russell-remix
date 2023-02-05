@@ -7,7 +7,7 @@ import { siteData, userData } from "~/data";
 export const meta: MetaFunction = () => {
   return {
     description: "John's welcome page.",
-    title: "JRB | About",
+    title: "John Russell Beaumont",
   };
 };
 
